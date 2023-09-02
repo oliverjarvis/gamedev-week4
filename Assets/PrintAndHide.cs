@@ -14,7 +14,7 @@ public class PrintAndHide : MonoBehaviour
     void Start()
     {
         i = 3;
-        randomVal = Random.Range(150, 250);
+        randomVal = Random.Range(150, 251);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class PrintAndHide : MonoBehaviour
         Debug.Log($"{name}:{++i}");
         if(this.CompareTag("Red") && i == 100)
             this.gameObject.SetActive(false);
-        if (this.CompareTag("Blue") && i == randomVal) 
-            this.gameObject.SetActive(false);
+        if (this.CompareTag("Blue") && i == randomVal)
+            rend.enabled = false;
     }
 }
